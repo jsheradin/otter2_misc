@@ -1,9 +1,9 @@
 # Amazon Kindle Fire 2 (otter2) LineageOS install guide
-This is all public info it's old and getting hard to find. I just compiled it all into one place.
+This is all public info but it's old and getting hard to find. I just compiled it all into one place.
 
 You are 100% responsible for whatever happens to your device when following this but it should work fine.
 
-### Step 0
+### STEP 0 - Setup
 
 You are going to need working ADB, fastboot, and USB cable.
 
