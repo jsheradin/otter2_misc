@@ -1,5 +1,5 @@
 # Amazon Kindle Fire 2 (otter2) LineageOS install guide
-This is all public info but it's old and getting hard to find. I just compiled it all into one place.
+This is all public info but it's old and getting hard to find the files. I just compiled it all into one place.
 
 You are 100% responsible for whatever happens to your device when following this but it should work fine.
 
@@ -29,9 +29,9 @@ Download the following files from this branch:
 * [otter2-u-boot-prod-10.2.4.bin](https://github.com/jsheradin/otter2_misc/raw/master/otter2-u-boot-prod-10.2.4.bin) md5sum: 5b03a7b428325de8d360ec201a745498
 * [stack](https://github.com/jsheradin/otter2_misc/raw/master/stack) md5sum: 3cee2b7f3233fc3a1e10373677b8c1a9
 
-Get a ROM and Gapps pair from here:
+Get a ROM such as [one of my LOS builds](https://github.com/jsheradin/android_device_amazon_otter2/releases)
 
-https://github.com/jsheradin/android_device_amazon_otter2/releases
+Get [openGapps](https://opengapps.org/) (If using my LOS11 ROMS choose ARM>4.4>pico or nano)
 
 ### STEP 3 - Stack override
 
@@ -52,6 +52,8 @@ You should be able to run:
 
 Fastboot screen should then show up (traffic light).
 
+**Caution:** If something goes wrong, you won't be able to get back into fastboot to fix it without a fastboot cable.
+
 #### Method 2
 Make, borrow, or buy a "fastboot cable" with the following pinout
 
@@ -63,20 +65,23 @@ Fastboot screen should then show up (traffic light).
 
 ### STEP 5 - Flash bootloader and recovery
 
-*DONT RE-FLASH FREEDOM-BOOT.IMG LATER AFTER FLASHING CM/LineageOS -- IT'S FOR STOCK AMAZON OS ONLY / FIRST INSTALL ONLY*
-
 Code:
 
-    fastboot -i 0x1949 flash bootloader otter2-u-boot-prod-10.2.4.bin
-    fastboot -i 0x1949 flash boot otter2-freedom-boot-10.4.6.img
-    fastboot -i 0x1949 flash recovery otter2-twrp-2.7.0.0-recovery.img
-    fastboot -i 0x1949 reboot
+    fastboot flash bootloader otter2-u-boot-prod-10.2.4.bin
+    fastboot flash boot otter2-freedom-boot-10.4.6.img
+    fastboot flash recovery otter2-twrp-2.7.0.0-recovery.img
 
-You should see the bootmenu with a BLUE logo.
+If commands finished without errors:
+
+* Unplug kindle from computer
+
+* Long hold the power button until the kindle shuts off
 
 ### Step 6 - Install LineageOS and Gapps
 
-During the blue logo screen press the power button to cycle through options and select "Recovery" to enter TWRP.
+* Hold power button to turn kindle back on.
+
+* During the blue logo screen press the power button to cycle through options and select "Recovery" to enter TWRP.
 
 In TWRP recovery:
 
@@ -99,17 +104,17 @@ Tada! You should now have LineageOS on your otter2.
 
 ### Returning to stock:
 ** FIND THE FILES WE BACKED UP IN STEP #1 OR DOWNLOAD NEW ONES FROM THE RECOVERY THREAD HERE: **
-http://forum.xda-developers.com/show....php?t=2035047
+http://forum.xda-developers.com/showthreadphp?t=2035047
 
 Once you have these files (we'll name them boot.img/recovery.img and system.img for the purpose of these instructions, but they could be different on your system).
 
 Plug in your fastboot cable and reboot so that you see the fastboot screen and enter the following commands:
 Code:
 
-    fastboot -i 0x1949 flash boot boot.img
-    fastboot -i 0x1949 flash recovery recovery.img
-    fastboot -i 0x1949 flash system system.img # This one will take a few minutes
-    fastboot -i 0x1949 reboot
+    fastboot flash boot boot.img
+    fastboot flash recovery recovery.img
+    fastboot flash system system.img # This one will take a few minutes
+    fastboot reboot
 
 Enjoy
 
