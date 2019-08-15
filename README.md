@@ -25,7 +25,7 @@ Take those files and put them somewhere safe (or don't up to you).
 
 Download the following files from this branch:
 * [otter2-freedom-boot-10.4.6.img](https://github.com/jsheradin/otter2_misc/raw/master/otter2-freedom-boot-10.4.6.img) md5sum: 80f9b9ba80910de361463560f86f315a
-* [otter2-twrp-2.6.3.0-recovery.img](https://github.com/jsheradin/otter2_misc/raw/master/otter2-twrp-2.7.0.0-recovery.img) md5sum: a66a8cbab92fd5daaa85f6303e9cc0c3
+* [otter2-twrp-2.7.0.0-recovery.img](https://github.com/jsheradin/otter2_misc/raw/master/otter2-twrp-2.7.0.0-recovery.img) md5sum: a66a8cbab92fd5daaa85f6303e9cc0c3
 * [otter2-u-boot-prod-10.2.4.bin](https://github.com/jsheradin/otter2_misc/raw/master/otter2-u-boot-prod-10.2.4.bin) md5sum: 5b03a7b428325de8d360ec201a745498
 * [stack](https://github.com/jsheradin/otter2_misc/raw/master/stack) md5sum: 3cee2b7f3233fc3a1e10373677b8c1a9
 
