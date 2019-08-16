@@ -104,7 +104,7 @@ Tada! You should now have LineageOS on your otter2.
 
 ### Returning to stock:
 ** FIND THE FILES WE BACKED UP IN STEP #1 OR DOWNLOAD NEW ONES FROM THE RECOVERY THREAD HERE: **
-http://forum.xda-developers.com/showthreadphp?t=2035047
+http://forum.xda-developers.com/showthread.php?t=2035047
 
 Once you have these files (we'll name them boot.img/recovery.img and system.img for the purpose of these instructions, but they could be different on your system).
 
